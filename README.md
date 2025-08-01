@@ -1,3 +1,5 @@
+## Currently in Development. DOn't know when it's going to complete.
+
 # ERP Management System (MERN Stack)
 
 A full-featured ERP web application with role-based access, product management, order tracking, invoicing, and reporting — built using MongoDB, Express.js, React, and Node.js.
