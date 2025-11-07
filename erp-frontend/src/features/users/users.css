@@ -1,0 +1,79 @@
+.users-page {
+  padding: 1.5rem;
+}
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.users-table th,
+.users-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.users-table th {
+  background: #fafafa;
+  font-weight: 600;
+}
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  min-width: 60px;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.role-badge.admin {
+  background: linear-gradient(135deg, #7b6ef6, #a78bfa);
+  box-shadow: 0 2px 6px rgba(123, 110, 246, 0.3);
+}
+
+.role-badge.user {
+  background: linear-gradient(135deg, #00b894, #26de81);
+  box-shadow: 0 2px 6px rgba(38, 222, 129, 0.3);
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: #f1f2f6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.btn-icon:hover {
+  background: #dfe4ea;
+}
+.btn-icon.delete {
+  color: #e74c3c;
+}
+.btn-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
