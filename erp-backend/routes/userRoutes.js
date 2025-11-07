@@ -9,8 +9,10 @@ import { protect, adminOnly } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
+// Get all users (admin only)
 router.route("/").get(protect, adminOnly, getUsers);
 
+// Get / Update / Delete user by ID (admin only)
 router
   .route("/:id")
   .get(protect, adminOnly, getUserById)

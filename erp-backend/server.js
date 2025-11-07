@@ -13,6 +13,8 @@ import purchaseRoutes from "./routes/purchaseRoutes.js";
 import saleRoutes from "./routes/saleRoutes.js";
 import companyRoutes from "./routes/companyRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import stockRoutes from "./routes/stockRoutes.js";
+import reportRoutes from "./routes/reportRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -35,6 +37,8 @@ app.use("/api/purchases", purchaseRoutes);
 app.use("/api/sales", saleRoutes);
 app.use("/api/company", companyRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/stock", stockRoutes);
+app.use("/api/reports", reportRoutes);
 
 // Root
 app.get("/", (req, res) => res.send("🚀 ERP Backend API is running..."));
