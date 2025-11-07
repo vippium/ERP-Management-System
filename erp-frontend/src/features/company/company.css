@@ -1,0 +1,39 @@
+.company-settings-wrapper {
+  animation: fadeIn 0.3s ease;
+}
+
+.company-card input,
+.company-card textarea {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 100%;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.company-card input:focus,
+.company-card textarea:focus {
+  border-color: #7b6ef6;
+  box-shadow: 0 0 0 3px rgba(123, 110, 246, 0.15);
+  outline: none;
+}
+
+.company-card label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
