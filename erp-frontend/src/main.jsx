@@ -5,6 +5,10 @@ import "./index.css";
 import { Provider } from "react-redux";
 import store from "./app/store.js";
 import { Toaster } from "react-hot-toast";
+import "./styles/erp-theme.css";
+import "./styles/buttons.css";
+import "./styles/forms.css";
+import "./styles/tables.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
