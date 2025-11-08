@@ -1,30 +1,118 @@
-.company-settings-wrapper {
-  animation: fadeIn 0.3s ease;
+@import "../../styles/erp-theme.css";
+
+.company-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  background: var(--color-bg);
+  min-height: 100vh;
+  font-family: var(--font-family);
 }
 
-.company-card input,
-.company-card textarea {
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 10px 12px;
+.company-card-modern {
+  background: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  padding: 1.75rem;
   width: 100%;
-  transition: all 0.2s ease;
-  font-family: "Poppins", sans-serif;
+  max-width: 680px;
+  animation: fadeIn 0.4s ease;
 }
 
-.company-card input:focus,
-.company-card textarea:focus {
-  border-color: #7b6ef6;
-  box-shadow: 0 0 0 3px rgba(123, 110, 246, 0.15);
-  outline: none;
+.company-header-modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
-.company-card label {
-  font-size: 0.9rem;
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.company-header-modern h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-card.compact {
+  box-shadow: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
   font-weight: 500;
-  color: #374151;
-  margin-bottom: 6px;
-  display: inline-block;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.logo-upload-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-preview-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-placeholder {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.form-actions {
+  text-align: right;
+  margin-top: 0.1rem;
 }
 
 @keyframes fadeIn {
@@ -36,4 +124,45 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.logo-upload-container {
+  position: relative;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.logo-actions-vertical {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  position: relative;
+  top: 20px;
+}
+
+.icon-btn {
+  width: 50px;
+  height: 34px;
+  border-radius: 30%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.icon-btn:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-btn {
+  color: var(--color-primary);
+}
+
+.remove-btn {
+  color: #ef4444;
 }
