@@ -54,7 +54,7 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
   padding: 2rem;
-  width: 440px;
+  width: 640px;
   max-width: 95%;
   overflow: hidden;
   animation: fadeIn 0.25s ease;
@@ -72,21 +72,34 @@
 }
 .modal-actions {
   display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
 }
 
 /* ========= GRID FORM LAYOUT ========= */
-.form-row {
+.form-row,
+.form-horizontal {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  );
   gap: 1rem;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Item rows in sale/purchase modals */
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ========= COMPACT FIELD SPACING ========= */
+.form-horizontal .form-group {
+  margin-bottom: 0.5rem;
+}
+
 .item-row {
   display: grid;
   grid-template-columns: 1.2fr 0.5fr auto;
@@ -94,7 +107,6 @@
   align-items: center;
 }
 
-/* Better section headings inside modals */
 .form-section-title {
   margin-top: 1rem;
   font-weight: 600;
@@ -104,7 +116,6 @@
   padding-bottom: 0.4rem;
 }
 
-/* Total footer styling */
 .total-footer {
   text-align: right;
   font-weight: 600;
@@ -179,8 +190,10 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
-  .form-row {
+/* ========= RESPONSIVE ========= */
+@media (max-width: 700px) {
+  .form-row,
+  .form-horizontal {
     grid-template-columns: 1fr !important;
   }
 

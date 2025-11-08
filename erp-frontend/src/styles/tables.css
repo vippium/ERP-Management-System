@@ -1,6 +1,5 @@
 @import "./erp-theme.css";
 
-/* ========= TABLES ========= */
 .table-card {
   background: var(--color-surface);
   border-radius: var(--radius);
