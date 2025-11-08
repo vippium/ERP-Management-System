@@ -9,10 +9,46 @@ import { protect, adminOnly } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-// Get all users (admin only)
-router.route("/").get(protect, adminOnly, getUsers);
+/**
+ * @swagger
+ * tags:
+ *   name: Users
+ *   description: Admin user management
+ */
 
-// Get / Update / Delete user by ID (admin only)
+/**
+ * @swagger
+ * /api/users:
+ *   get:
+ *     summary: Get all users (Admin only)
+ *     tags: [Users]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: List of users
+ */
+
+/**
+ * @swagger
+ * /api/users/{id}:
+ *   get:
+ *     summary: Get user by ID
+ *     tags: [Users]
+ *     security:
+ *       - bearerAuth: []
+ *   put:
+ *     summary: Update user
+ *     tags: [Users]
+ *     security:
+ *       - bearerAuth: []
+ *   delete:
+ *     summary: Delete user
+ *     tags: [Users]
+ *     security:
+ *       - bearerAuth: []
+ */
+router.route("/").get(protect, adminOnly, getUsers);
 router
   .route("/:id")
   .get(protect, adminOnly, getUserById)
