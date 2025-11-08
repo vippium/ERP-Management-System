@@ -1,12 +1,14 @@
 .users-page {
   padding: 1.5rem;
 }
+
 .users-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
+
 .users-table {
   width: 100%;
   border-collapse: collapse;
@@ -15,57 +17,54 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
+
 .users-table th,
 .users-table td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #eee;
   text-align: left;
 }
+
 .users-table th {
   background: #fafafa;
   font-weight: 600;
 }
-.role-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 10px;
-  border-radius: 9999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: capitalize;
-  min-width: 60px;
-  color: #fff;
-  transition: all 0.2s ease;
+
+.users-table td {
+  vertical-align: middle;
 }
 
-.role-badge.admin {
-  background: linear-gradient(135deg, #7b6ef6, #a78bfa);
-  box-shadow: 0 2px 6px rgba(123, 110, 246, 0.3);
-}
-
-.role-badge.user {
-  background: linear-gradient(135deg, #00b894, #26de81);
-  box-shadow: 0 2px 6px rgba(38, 222, 129, 0.3);
-}
-
+/* action buttons */
 .btn-icon {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   padding: 6px 10px;
   background: #f1f2f6;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.85rem;
+  transition: var(--transition);
 }
+
+.btn-icon span {
+  display: inline-block;
+}
+
 .btn-icon:hover {
   background: #dfe4ea;
 }
+
+.btn-icon[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .btn-icon.delete {
   color: #e74c3c;
 }
+
 .btn-refresh {
   display: inline-flex;
   align-items: center;
@@ -76,4 +75,103 @@
   border-radius: 6px;
   padding: 8px 12px;
   cursor: pointer;
+}
+
+.users-header-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1rem;
+}
+
+/* Polished role badges */
+.role-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  box-shadow: var(--shadow-sm);
+}
+
+.role-chip.admin {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.role-chip.user {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+/* Popover modal styles */
+.popover-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 25, 40, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  backdrop-filter: blur(4px);
+}
+
+.popover-box {
+  background: var(--color-surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  width: 360px;
+  text-align: center;
+  animation: fadeIn 0.25s ease;
+}
+
+.popover-box h4 {
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.popover-box p {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.popover-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Add small tweaks for popover form elements */
+.popover-box form .form-group {
+  margin-bottom: 0.75rem;
+}
+.popover-box form label {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+.popover-box form input,
+.popover-box form select {
+  width: 100%;
 }
