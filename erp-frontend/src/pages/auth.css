@@ -1,54 +1,171 @@
-.auth-container {
+@import "../styles/erp-theme.css";
+@import "../styles/buttons.css";
+
+/* ==============================
+   LOGIN PAGE
+============================== */
+.auth-page {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  background: #f9fafb;
+  background: linear-gradient(120deg, #f2f0ff 0%, #fafaff 100%);
+  padding: 1.5rem;
+  font-family: var(--font-family);
+  overflow: hidden;
 }
 
-.auth-card {
-  background: #fff;
-  padding: 2rem 2.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 350px;
-}
-
-.auth-card h2 {
+/* ===== Brand (centered logo) ===== */
+.auth-brand.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  animation: fadeDown 0.5s ease;
+}
+
+.auth-brand h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 0.5rem;
+}
+
+.auth-brand p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== Card ===== */
+.auth-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+  width: 400px;
+  max-width: 95%;
+  animation: fadeIn 0.5s ease;
   text-align: center;
 }
 
-.auth-card label {
-  display: block;
+.auth-card h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 0.25rem;
-  font-weight: 500;
 }
 
-.auth-card input {
-  width: 100%;
-  padding: 8px 10px;
+.auth-subtext {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Input Fields ===== */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 5px;
-  outline: none;
 }
 
-.auth-card input:focus {
-  border-color: #2563eb;
+.input-icon {
+  position: absolute;
+  left: 10px;
+  color: var(--color-text-muted);
 }
 
-.auth-card button {
+.input-group input {
   width: 100%;
-  padding: 10px;
-  background: #111827;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.2s;
+  padding: 10px 36px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: #fff;
+  font-size: 0.95rem;
+  transition: var(--transition);
 }
 
-.auth-card button:hover {
-  background: #2563eb;
+.input-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* ===== Password Toggle ===== */
+.password-group .toggle-password {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.password-group .toggle-password:hover {
+  color: var(--color-primary);
+}
+
+/* ===== Button ===== */
+.btn.full-width {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* ===== Footer ===== */
+.auth-card footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .auth-card {
+    width: 100%;
+    max-width: 360px;
+    padding: 1.5rem;
+  }
+
+  .auth-brand.centered {
+    margin-bottom: 1rem;
+  }
+
+  .auth-brand h1 {
+    font-size: 1.5rem;
+  }
 }
