@@ -184,6 +184,13 @@ ERP-Management-System/
 
 ---
 
+## 🧪 Demo Credentials
+
+- **Email/Username:** vipinpr@admin.com
+- **Password:** password123
+
+---
+
 
 ## ⚙️ Installation & Setup
 
