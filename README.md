@@ -178,16 +178,16 @@ ERP-Management-System/
 
 ## 🚀 Live Links
 
-- **Frontend (Vercel):** https://erp-management-system-eta.vercel.app
-- **Backend (Render):** https://erp-backend-w1x2.onrender.com
-- **API Documentation (Swagger):** https://erp-backend-w1x2.onrender.com/api-docs
+- **Frontend (Vercel):** `https://erp-management-system-eta.vercel.app`
+- **Backend (Render):** `https://erp-backend-w1x2.onrender.com`
+- **API Documentation (Swagger):** `https://erp-backend-w1x2.onrender.com/api-docs`
 
 ---
 
 ## 🧪 Demo Credentials
 
-- **Email/Username:** vipinpr@admin.com
-- **Password:** password123
+- **Email/Username:** `vipinpr@admin.com`
+- **Password:** `password123`
 
 ---
 
